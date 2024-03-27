@@ -8,7 +8,6 @@ public class controls : MonoBehaviour
 {
     public GameObject text;
     public GameObject ikon;
-    public Animation anim;
     // Start is called before the first frame update
     void Start()
     {
