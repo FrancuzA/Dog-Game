@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class movement : MonoBehaviour
@@ -48,16 +49,16 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            front.transform.Translate(Vector3.up);
+            player.transform.Translate(new Vector3(0, 1f,0));
             front.transform.Rotate(new Vector3(0, 0,-playerangle));
         }
         if (Input.GetKey(KeyCode.G))
         {
-            front.transform.Rotate(new Vector3(0, 0, -0.5f));
+            front.transform.Rotate(new Vector3(0, 0, -0.1f));
         }
         if (Input.GetKey(KeyCode.H))
         {
-            front.transform.Rotate(new Vector3(0, 0, 0.5f));
+            front.transform.Rotate(new Vector3(0, 0, 0.1f));
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -68,7 +69,10 @@ public class movement : MonoBehaviour
             legFR.SetActive(!legFR.activeSelf);
             legML.SetActive(!legML.activeSelf);
             legMR.SetActive(!legMR.activeSelf); 
-            Debug.Log("toggel");
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("lvl1");
         }
     }
 }
