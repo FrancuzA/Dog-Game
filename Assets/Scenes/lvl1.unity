@@ -956,6 +956,7 @@ MonoBehaviour:
   SKlepUI: {fileID: 1837900962}
   GHat: {fileID: 919132148312303714}
   GHatUI: {fileID: 953085133}
+  Fillbar: {fileID: 0}
 --- !u!1 &290701333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3166,7 +3167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1837900963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3716,7 @@ Transform:
   m_GameObject: {fileID: 919132149093460236}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.69313395, z: -0, w: -0.72080886}
-  m_LocalPosition: {x: -8.1, y: -1.88, z: -6.9}
+  m_LocalPosition: {x: -8.1, y: -1.88, z: -6.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3866,7 +3867,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543450653635851190}
   - component: {fileID: 919132149093460237}
-  - component: {fileID: 919132149093460239}
   m_Layer: 0
   m_Name: jamnik
   m_TagString: Untagged
@@ -3886,38 +3886,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0d2f0580b7500409db1c3d440b8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modulePrefab: {fileID: 6600905347071896730, guid: 73b16d7296ead6d40b2867cd18f769c3, type: 3}
+  modulePrefab: {fileID: 4366327088256554481, guid: 3a0cd8aba951f974c91565311e33e98e, type: 3}
   playerTail: {fileID: 7142338907163518698}
   playerHead: {fileID: 966878461473314496}
-  distanceBetweenModules: 0.4
+  distanceBetweenModules: 0.34
   player: {fileID: 543450653635851190}
---- !u!54 &919132149093460239
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149093460236}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  drift1: 0.41
+  drift2: -0.073
 --- !u!1 &919132149284916843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,7 +4710,7 @@ HingeJoint:
   m_Anchor: {x: 0.1, y: -0.58, z: 0.17}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.01979579, y: -0.47338247, z: -0.10595518}
+  m_ConnectedAnchor: {x: -0.019795865, y: -0.47338247, z: -0.1059553}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -5388,7 +5363,7 @@ HingeJoint:
   m_Anchor: {x: 0.1, y: -0.45, z: 0.15}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.01979582, y: -0.3094232, z: -0.13117984}
+  m_ConnectedAnchor: {x: -0.01979588, y: -0.3094232, z: -0.13117972}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -5497,7 +5472,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.15052749, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.06563324, y: -0.013186149, z: 0.20858754}
+  m_ConnectedAnchor: {x: -0.06563306, y: -0.013186027, z: 0.20858754}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -5720,7 +5695,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.2, z: -0.13}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.07763533, y: -0.02297309, z: 0.22140265}
+  m_ConnectedAnchor: {x: 0.07763553, y: -0.02297309, z: 0.22140265}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -5830,7 +5805,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.58, z: 0.17}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14591856, y: -0.4733826, z: -0.10595518}
+  m_ConnectedAnchor: {x: -0.14591815, y: -0.47338247, z: -0.1059553}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -6193,7 +6168,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.18598291, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.08391365, y: -0.36360765, z: 0.08445808}
+  m_ConnectedAnchor: {x: -0.08391358, y: -0.36360782, z: 0.0844582}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -6296,7 +6271,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.45, z: 0.15}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14591858, y: -0.30942333, z: -0.13117984}
+  m_ConnectedAnchor: {x: -0.14591816, y: -0.3094232, z: -0.13117975}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
