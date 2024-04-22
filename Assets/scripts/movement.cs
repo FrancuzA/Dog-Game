@@ -17,8 +17,8 @@ public class movement : MonoBehaviour
     public GameObject legBR;
     public GameObject front;
     public UnityEngine.UI.Image EnergyBar;
-    public static int Parowy;
-    public static int Buly;
+    public static int Parowy=10;
+    public static int Buly=10;
     private float playerangle = 0;
     public float EnergyDrain = 0.0001f;
     void Start()
@@ -85,6 +85,23 @@ public class movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("lvl1");
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "bula")
+        {
+            other.gameObject.SetActive(false);
+            Buly++;
+            Debug.Log("zebrano bule!");
+        }
+
+        if (other.gameObject.tag == "parowa")
+        {
+            other.gameObject.SetActive(false);
+            Parowy++;
+            Debug.Log("zebrapo parowe!!");
         }
     }
 }
