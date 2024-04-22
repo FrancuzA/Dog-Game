@@ -1,7 +1,9 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class movement : MonoBehaviour
@@ -14,7 +16,11 @@ public class movement : MonoBehaviour
     public GameObject legBL;
     public GameObject legBR;
     public GameObject front;
+    public UnityEngine.UI.Image EnergyBar;
+    public static int Parowy;
+    public static int Buly;
     private float playerangle = 0;
+    public float EnergyDrain = 0.0001f;
     void Start()
     {
         
@@ -26,26 +32,32 @@ public class movement : MonoBehaviour
         if(Input.GetKey(KeyCode.Q))
         {
             legBL.transform.Rotate(new Vector3(-1,0,0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
         if (Input.GetKey(KeyCode.W))
         {
             legML.transform.Rotate(new Vector3(-1, 0, 0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
         if (Input.GetKey(KeyCode.E))
         {
             legFL.transform.Rotate(new Vector3(-1, 0,0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
         if (Input.GetKey(KeyCode.P))
         {
             legBR.transform.Rotate(new Vector3(-1,0,0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
         if (Input.GetKey(KeyCode.O))
         {
             legMR.transform.Rotate(new Vector3(-1, 0, 0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
         if (Input.GetKey(KeyCode.I))
         {
             legFR.transform.Rotate(new Vector3(-1, 0, 0));
+            EnergyBar.fillAmount -= EnergyDrain;
         }
        /* if (Input.GetKeyDown(KeyCode.Space))
         {

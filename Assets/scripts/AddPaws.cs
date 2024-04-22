@@ -22,9 +22,9 @@ public class AddPaws : MonoBehaviour
         }
     }
 
-    void SpawnModule()
+    public void SpawnModule()
     {
-      
+        if(sklep.HotDogs > 0) {
         Destroy(playerTail.GetComponent<HingeJoint>());
 
        
@@ -60,5 +60,10 @@ public class AddPaws : MonoBehaviour
         playerTail = newModule.transform;
 
         newModule.transform.SetParent(player);
+        }
+        else
+        {
+            Debug.Log("not enought resources!!");
+        }
     }
 }
