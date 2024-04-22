@@ -6,7 +6,7 @@ using UnityEngine;
 public class sklep : MonoBehaviour
 {
     public GameObject SKlepUI;
-    public static int HotDogs;
+    public static int HotDogs =100;
     public GameObject GHat;
     public GameObject GHatUI;
     void Update()
