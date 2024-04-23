@@ -12,7 +12,7 @@ public class AddPaws : MonoBehaviour
     float springforce = 10f;
     float damperforce = 3f;
     public float drift1 =0.41f;
-    public float drift2 = -0.073f;
+    public float drift2 = -0.055f;
 
 
     // Update is called once per frame
@@ -31,25 +31,21 @@ public class AddPaws : MonoBehaviour
         Destroy(playerTail.GetComponent<HingeJoint>());
 
             
-            Vector3 tailPosition = playerTail.localPosition + new Vector3(0, 0f, -distanceBetweenModules);
+        Vector3 tailPosition = playerTail.localPosition + new Vector3(0, 0f, -distanceBetweenModules);
         playerTail.localPosition = tailPosition;
-
-        GameObject newModule = Instantiate(modulePrefab, playerTail.position + new Vector3(-drift1,-0.01f,drift2), Quaternion.Euler(0f, 90f,0f));
+        //playerHead.localRotation = Quaternion.Euler(-90,0,0);
+        GameObject newModule = Instantiate(modulePrefab, playerTail.position + new Vector3(-drift1,-0.01f,drift2), Quaternion.Euler(0f, 92f,0f));
             
-        HingeJoint hinge = newModule.GetComponent<HingeJoint>();
-        hinge.connectedBody = playerHead.GetComponent<Rigidbody>();
-        hinge.anchor = new Vector3 (0,0f, 0.046f);
+        FixedJoint joint = newModule.GetComponent<FixedJoint>();
+        joint.connectedBody = playerHead.GetComponent<Rigidbody>();
 
-        
-        HingeJoint tailHinge = playerTail.gameObject.AddComponent<HingeJoint>();
+
+        Destroy(playerTail.GetComponent<FixedJoint>());
+        FixedJoint tailHinge = playerTail.gameObject.AddComponent<FixedJoint>();
         tailHinge.connectedBody = newModule.GetComponent<Rigidbody>();
-        tailHinge.axis = new Vector3(0f, 0f, 1f);
-        tailHinge.anchor = new Vector3(-0.09f, -0.05f, 0);
-        tailHinge.useSpring = true;
-        tailHinge.useLimits = true;
-        tailHinge.enablePreprocessing = false;
+       
 
-        JointSpring hingeSpring = tailHinge.spring;
+        /*JointSpring hingeSpring = tailHinge.spring;
         hingeSpring.spring = springforce;
         hingeSpring.damper = damperforce;
         tailHinge.spring = hingeSpring;
@@ -57,7 +53,7 @@ public class AddPaws : MonoBehaviour
         JointLimits jointLimits = tailHinge.limits;
         jointLimits.max = 15f;
         jointLimits.min = -15f;
-        tailHinge.limits = jointLimits;
+        tailHinge.limits = jointLimits;*/
 
         playerHead = newModule.transform;
 

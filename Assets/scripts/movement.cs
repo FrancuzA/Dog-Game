@@ -82,6 +82,17 @@ public class movement : MonoBehaviour
             legML.SetActive(!legML.activeSelf);
             legMR.SetActive(!legMR.activeSelf); 
         }
+
+        if (EnergyBar.fillAmount == 0)
+        {
+            legBL.SetActive(false);
+            legBR.SetActive(false);
+            legFL.SetActive(false);
+            legFR.SetActive(false);
+            legML.SetActive(false);
+            legMR.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("lvl1");

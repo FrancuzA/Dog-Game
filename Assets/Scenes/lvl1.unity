@@ -934,6 +934,7 @@ RectTransform:
   - {fileID: 116069729}
   - {fileID: 1837900963}
   - {fileID: 435899707}
+  - {fileID: 2080851386}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -956,7 +957,7 @@ MonoBehaviour:
   SKlepUI: {fileID: 1837900962}
   GHat: {fileID: 919132148312303714}
   GHatUI: {fileID: 953085133}
-  Fillbar: {fileID: 0}
+  Fillbar: {fileID: 435899708}
 --- !u!1 &290701333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,8 +1083,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2080851386}
+  m_Children: []
   m_Father: {fileID: 208537953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2219,7 +2219,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 208537954}
         m_TargetAssemblyTypeName: sklep, Assembly-CSharp
-        m_MethodName: MakeHotdog
+        m_MethodName: RfillEnergy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3435,11 +3435,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 435899707}
+  m_Father: {fileID: 208537953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: -340.00003, y: 155.00002}
   m_SizeDelta: {x: 87.3, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080851387
@@ -3892,7 +3892,7 @@ MonoBehaviour:
   distanceBetweenModules: 0.34
   player: {fileID: 543450653635851190}
   drift1: 0.41
-  drift2: -0.073
+  drift2: -0.055
 --- !u!1 &919132149284916843
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,9 +3983,7 @@ GameObject:
   - component: {fileID: 5874714574335256028}
   - component: {fileID: 8242120156376875072}
   - component: {fileID: 8242120156376875073}
-  - component: {fileID: 8242120156376875074}
   - component: {fileID: 8242120156376875075}
-  - component: {fileID: 8242120156376875076}
   m_Layer: 0
   m_Name: body back
   m_TagString: Untagged
@@ -4373,7 +4371,7 @@ Transform:
   m_GameObject: {fileID: 6057730308931213185}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.16138361, y: 0.5694629, z: 0.4215532}
+  m_LocalPosition: {x: 0.1614, y: 0.5776, z: 0.4129}
   m_LocalScale: {x: 0.40318102, y: 0.40318102, z: 0.534939}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4944,6 +4942,9 @@ GameObject:
   - component: {fileID: 5456851531641657187}
   - component: {fileID: 6091483031443355629}
   - component: {fileID: 6091483031443355630}
+  - component: {fileID: 6091483031443355632}
+  - component: {fileID: 6091483031443355631}
+  - component: {fileID: 6091483031443355633}
   m_Layer: 0
   m_Name: body front
   m_TagString: Untagged
@@ -5288,6 +5289,154 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7795360342617720186, guid: 485a21cda04a99d4dae9e5aac8a4d2fe, type: 3}
+--- !u!65 &6091483031443355631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171925201450351844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20217822, y: 0.15948515, z: 0.089427695}
+  m_Center: {x: -0.08806191, y: -0.6471954, z: -0.28010684}
+--- !u!114 &6091483031443355632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171925201450351844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02998e4e3debc0f46a26caed7efc4bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 919132149093460236}
+  legFL: {fileID: 2068476862}
+  legFR: {fileID: 432791964}
+  legML: {fileID: 556759472}
+  legMR: {fileID: 290701333}
+  legBL: {fileID: 1181336018}
+  legBR: {fileID: 431513012}
+  front: {fileID: 5171925201450351844}
+  EnergyBar: {fileID: 435899708}
+  EnergyDrain: 0.0001
+--- !u!114 &6091483031443355633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171925201450351844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+  targetIsSelf: 1
+  targetGO: {fileID: 0}
+  tweenTargetIsTargetGO: 1
+  delay: 0
+  duration: 1
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loopType: 0
+  loops: 1
+  id: 
+  isRelative: 0
+  isFrom: 0
+  isIndependentUpdate: 0
+  autoKill: 1
+  isActive: 1
+  isValid: 0
+  target: {fileID: 0}
+  animationType: 0
+  targetType: 0
+  forcedTargetType: 0
+  autoPlay: 1
+  useTargetAsV3: 0
+  endValueFloat: 0
+  endValueV3: {x: 0, y: 0, z: 0}
+  endValueV2: {x: 0, y: 0}
+  endValueColor: {r: 1, g: 1, b: 1, a: 1}
+  endValueString: 
+  endValueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endValueTransform: {fileID: 0}
+  optionalBool0: 0
+  optionalFloat0: 0
+  optionalInt0: 0
+  optionalRotationMode: 0
+  optionalScrambleMode: 0
+  optionalString: 
 --- !u!23 &6164996480654273758
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6024,28 +6173,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3066918774229038883, guid: 485a21cda04a99d4dae9e5aac8a4d2fe, type: 3}
---- !u!114 &8242120156376875074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431221764586173612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02998e4e3debc0f46a26caed7efc4bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 919132149093460236}
-  legFL: {fileID: 2068476862}
-  legFR: {fileID: 432791964}
-  legML: {fileID: 556759472}
-  legMR: {fileID: 290701333}
-  legBL: {fileID: 1181336018}
-  legBR: {fileID: 431513012}
-  front: {fileID: 5171925201450351844}
-  EnergyBar: {fileID: 435899708}
-  EnergyDrain: 0.0001
 --- !u!59 &8242120156376875075
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -6085,27 +6212,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &8242120156376875076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431221764586173612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.20394944, y: 0.08898063, z: 0.11747481}
-  m_Center: {x: -0.08894703, y: -0.69124717, z: -0.2769331}
 --- !u!23 &8401435433498276046
 MeshRenderer:
   m_ObjectHideFlags: 0
