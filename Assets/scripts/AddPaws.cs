@@ -9,8 +9,7 @@ public class AddPaws : MonoBehaviour
     public Transform playerHead; 
     public float distanceBetweenModules =0.33f;
     public Transform player;
-    float springforce = 10f;
-    float damperforce = 3f;
+    
     public float drift1 =0.41f;
     public float drift2 = -0.055f;
 

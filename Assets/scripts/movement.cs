@@ -59,11 +59,6 @@ public class movement : MonoBehaviour
             legFR.transform.Rotate(new Vector3(-1, 0, 0));
             EnergyBar.fillAmount -= EnergyDrain;
         }
-       /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            player.transform.Translate(new Vector3(0, 1f,0));
-            front.transform.Rotate(new Vector3(0, 0,-playerangle));
-        }*/
         if (Input.GetKey(KeyCode.G))
         {
             front.transform.Rotate(new Vector3(0, 0, -0.1f));
