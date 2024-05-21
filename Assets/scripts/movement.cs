@@ -90,7 +90,7 @@ public class movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("lvl1");
+            SceneManager.LoadScene(2);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tutorialdog : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class Tutorialdog : MonoBehaviour
     public GameObject front;
     public GameObject camera1;
     public GameObject EnergyUI;
+    public GameObject CS1;
+    public GameObject CS2;
+    public GameObject TutTXT1;
+    public GameObject TutTXT2;
+    public GameObject TutTXT3;
+    public GameObject TutTXT4;
+    public GameObject TutTXT5;
+    public GameObject TutTXT6;   
+    public GameObject TutTXT7;
     public UnityEngine.UI.Image EnergyBar;
     public static int Parowy = 0;
     public static int Buly = 0;
@@ -117,25 +127,42 @@ public class Tutorialdog : MonoBehaviour
 
     IEnumerator TutorialPhases()
     {
-
+        CS1.SetActive(true);
+        yield return new WaitForSecondsRealtime(7f);
+        CS1.SetActive(false);
+        CS2.SetActive(true);
+        yield return new WaitForSecondsRealtime(6f);
+        CS2.SetActive(false);  
+        TutTXT1.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
+        TutTXT1.SetActive(false);
         Tut_started = true;
         camera1.transform.SetLocalPositionAndRotation(new Vector3(-1.6f, -0.2f, 0.6f), new Quaternion(0.57923f, 0.57923f, 0.40558f, 0.40558f));
+        TutTXT2.SetActive(true);
         yield return new WaitUntil(() => Tut_leg1 == true);
-
+        TutTXT2.SetActive(false);
+        TutTXT3.SetActive(true);
         yield return new WaitUntil(() => Tut_leg2 == true);
-
+        TutTXT3.SetActive(false);
+        TutTXT4.SetActive(true);
         yield return new WaitUntil(() => Tut_leg3 == true);
-
+        TutTXT4.SetActive(false);
+        TutTXT5.SetActive(true);
         camera1.transform.SetLocalPositionAndRotation(new Vector3(1.6f, -0.2f, 0.6f), new Quaternion(0.57923f, -0.57923f, -0.40558f, 0.40558f));
-
         yield return new WaitUntil(() => Tut_leg4 == true);
-
+        TutTXT5.SetActive(false);
+        TutTXT6.SetActive(true);
         yield return new WaitUntil(() => Tut_leg5 == true);
-
+        TutTXT6.SetActive(false);
+        TutTXT7.SetActive(true);
         yield return new WaitUntil(() => Tut_leg6 == true);
+        TutTXT7.SetActive(false);
         rb.isKinematic = false;
         camera1.transform.SetLocalPositionAndRotation(new Vector3(0f, 1.6f, 0.6f), new Quaternion(0.81915f, 0, 0, 0.57358f));
         EnergyUI.SetActive(true);
+
+        yield return new WaitUntil(() => Buly==1 && Parowy==1);
+
+        SceneManager.LoadScene(2);
     }
 }
