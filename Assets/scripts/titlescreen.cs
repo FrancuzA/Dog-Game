@@ -19,7 +19,7 @@ public class titlescreen : MonoBehaviour
     }
     public void funkcja1()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Debug.Log("LOADING SCENE");
     }
     public void ExitGame()
