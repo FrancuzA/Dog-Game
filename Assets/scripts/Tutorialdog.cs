@@ -17,6 +17,7 @@ public class Tutorialdog : MonoBehaviour
     public GameObject EnergyUI;
     public GameObject CS1;
     public GameObject CS2;
+    public GameObject TutTXTBG;
     public GameObject TutTXT1;
     public GameObject TutTXT2;
     public GameObject TutTXT3;
@@ -24,6 +25,9 @@ public class Tutorialdog : MonoBehaviour
     public GameObject TutTXT5;
     public GameObject TutTXT6;   
     public GameObject TutTXT7;
+    public GameObject TutTXT8;
+    public GameObject TutTXT9;
+
     public UnityEngine.UI.Image EnergyBar;
     public static int Parowy = 0;
     public static int Buly = 0;
@@ -133,6 +137,7 @@ public class Tutorialdog : MonoBehaviour
         CS2.SetActive(true);
         yield return new WaitForSecondsRealtime(6f);
         CS2.SetActive(false);  
+        TutTXTBG.SetActive(true);
         TutTXT1.SetActive(true);
         yield return new WaitForSecondsRealtime(3f);
         TutTXT1.SetActive(false);
@@ -160,9 +165,14 @@ public class Tutorialdog : MonoBehaviour
         rb.isKinematic = false;
         camera1.transform.SetLocalPositionAndRotation(new Vector3(0f, 1.6f, 0.6f), new Quaternion(0.81915f, 0, 0, 0.57358f));
         EnergyUI.SetActive(true);
-
+        TutTXT8.SetActive(true);
+        yield return new WaitForSecondsRealtime(3f);
+        TutTXT8.SetActive(false);
+        TutTXT9.SetActive(true);
+        yield return new WaitForSecondsRealtime(10f);
+        TutTXT9.SetActive(false);
+        TutTXTBG.SetActive(false);
         yield return new WaitUntil(() => Buly==1 && Parowy==1);
-
         SceneManager.LoadScene(2);
     }
 }
