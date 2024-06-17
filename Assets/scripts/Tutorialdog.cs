@@ -99,7 +99,7 @@ public class Tutorialdog : MonoBehaviour
         }
 
         camangle = camera1.transform.localRotation;
-        Debug.Log(camangle);
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {
