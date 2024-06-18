@@ -8,22 +8,22 @@ public class end_control : MonoBehaviour
     public float speed = 0.02f;
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             back.transform.Translate(new Vector3(speed, 0f, 0f));
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             back.transform.Translate(new Vector3(-speed, 0f, 0f));
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             back.transform.Translate(new Vector3(0f,-speed, 0f));
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             back.transform.Translate(new Vector3(0f, speed, 0f));
         }

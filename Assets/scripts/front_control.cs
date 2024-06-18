@@ -8,22 +8,22 @@ public class front_control : MonoBehaviour
     public float speed;
      void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.S))
         {
             front.transform.Translate(new Vector3(speed, 0f, 0f));
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.W))
         {
             front.transform.Translate(new Vector3(-speed, 0f, 0f));
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.D))
         {
             front.transform.Translate(new Vector3(0f, -speed, 0f));
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.A))
         {
             front.transform.Translate(new Vector3(0f, speed, 0f));
         }

@@ -28,7 +28,7 @@ public class titlescreen : MonoBehaviour
                 settingsdog.SetActive(true);
                 menucanva.SetActive(false);
                 inSettings = true;
-            Vector3 settingscords = new Vector3(9f, 2.8f, 7.1f);
+            Vector3 settingscords = new Vector3(42.23f, 2.58f, -22.89f);
             Debug.Log("escape");
             Camera1.position = settingscords;
             }
