@@ -8,6 +8,12 @@ TagManager:
   - parowa
   - pl
   - ay
+  - 0
+  - 20
+  - 40
+  - 60
+  - 80
+  - 100
   layers:
   - Default
   - TransparentFX
