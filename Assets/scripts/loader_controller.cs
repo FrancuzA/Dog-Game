@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +12,8 @@ public class loader_controller : MonoBehaviour
      public GameObject mainMenu;
      public Image progressBar;
      public Transform front;
+     public GameObject paruwabar;
+     public Image paruwafill;
 
     public float fill =0;
     // Update is called once per frame
@@ -21,16 +22,21 @@ public class loader_controller : MonoBehaviour
         if (pl_activ== true && ay_activ == true)
         {
             fill += 0.005f;
+            paruwabar.SetActive(true);
+            paruwafill.fillAmount = fill;
         }
         else
         {
             fill = 0;
+            paruwafill.fillAmount = 0;
+            paruwabar.SetActive(false);
         }
         if(fill >= 1)
         {
-        pl_activ = false;
-        ay_activ = false;
-        LoadLevelAnim("tutorial");
+            paruwabar.SetActive(false);
+            pl_activ = false;
+            ay_activ = false;
+            LoadLevelAnim("tutorial");
         }
     }
 

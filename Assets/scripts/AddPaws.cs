@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AddPaws : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AddPaws : MonoBehaviour
     public Transform playerHead; 
     public float distanceBetweenModules =0.33f;
     public Transform player;
+    public float angle1;
     
     public float drift1 =0.41f;
     public float drift2 = -0.055f;
@@ -33,7 +35,7 @@ public class AddPaws : MonoBehaviour
         Vector3 tailPosition = playerTail.localPosition + new Vector3(0, 0f, -distanceBetweenModules);
         playerTail.localPosition = tailPosition;
         //playerHead.localRotation = Quaternion.Euler(-90,0,0);
-        GameObject newModule = Instantiate(modulePrefab, playerTail.position + new Vector3(-drift1,-0.01f,drift2), Quaternion.Euler(0f, 92f,0f));
+        GameObject newModule = Instantiate(modulePrefab, playerTail.position + new Vector3(-drift1,-0.01f,drift2), Quaternion.EulerAngles(0f, angle1,0f));
             
         FixedJoint joint = newModule.GetComponent<FixedJoint>();
         joint.connectedBody = playerHead.GetComponent<Rigidbody>();

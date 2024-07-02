@@ -1046,14 +1046,14 @@ RectTransform:
   m_GameObject: {fileID: 1222646545}
   m_LocalRotation: {x: -0, y: -0, z: -0.5461094, w: 0.8377139}
   m_LocalPosition: {x: 0, y: 0, z: 4.169523}
-  m_LocalScale: {x: 4.034061, y: 7.2645206, z: 7.26452}
+  m_LocalScale: {x: 1.0742301, y: 1.9344692, z: 1.9344691}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1298676035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -66.201}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 989.3042, y: 168.83508}
+  m_AnchoredPosition: {x: 1259.4, y: 319.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222646547
@@ -1561,14 +1561,14 @@ RectTransform:
   m_GameObject: {fileID: 1544933757}
   m_LocalRotation: {x: -0, y: -0, z: -0.5461094, w: 0.8377139}
   m_LocalPosition: {x: 0, y: 0, z: 4.169523}
-  m_LocalScale: {x: 4.034061, y: 7.264521, z: 7.26452}
+  m_LocalScale: {x: 1.0742301, y: 1.9344693, z: 1.9344691}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1298676035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -66.201}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 989.3044, y: 168.83527}
+  m_AnchoredPosition: {x: 1259.4001, y: 319.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544933759
@@ -2186,6 +2186,8 @@ MonoBehaviour:
   mainMenu: {fileID: 163182678}
   progressBar: {fileID: 447579050}
   front: {fileID: 31048151}
+  paruwabar: {fileID: 1298676034}
+  paruwafill: {fileID: 1222646547}
   fill: 0
 --- !u!114 &9424794675107147
 MonoBehaviour:
@@ -2200,7 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   front: {fileID: 8761692855772541120}
-  speed: 0.005
+  speed: 1
 --- !u!4 &143587253795641694
 Transform:
   m_ObjectHideFlags: 0
@@ -2473,6 +2475,7 @@ GameObject:
   - component: {fileID: 1711813854846250057}
   - component: {fileID: 3469287837766195332}
   - component: {fileID: 3469287837766195334}
+  - component: {fileID: 3469287837766195335}
   m_Layer: 0
   m_Name: music button
   m_TagString: Untagged
@@ -3119,7 +3122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   front: {fileID: 6909869104409455915}
-  speed: 0.005
+  speed: 1
 --- !u!1 &2909091344948844056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,8 +3399,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0926316, y: 0.48679882, z: 0.12513311}
-  m_Center: {x: -0.03349135, y: 0.35092607, z: -0.06699556}
+  m_Size: {x: 3.0788858, y: 0.48679882, z: 0.1251331}
+  m_Center: {x: -0.026623804, y: 0.35092318, z: -0.066998415}
+--- !u!65 &3469287837766195335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147831033244}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19457033, y: 0.48679882, z: 0.95174503}
+  m_Center: {x: -1.6771202, y: 0.35092252, z: -0.4741722}
 --- !u!33 &3469287838200653164
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3853,7 +3877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   back: {fileID: 5920390647175950354}
-  speed: 0.005
+  speed: 1
 --- !u!33 &5810433182362718266
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4164,7 +4188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e0a4ba2670c754a812defbf28a616f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _start: {fileID: 6335115235010988704}
+  _start: {fileID: 5718657722259678614}
   _end: {fileID: 4822526418961477432}
 --- !u!4 &6335115235010988704
 Transform:
@@ -4523,7 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e0a4ba2670c754a812defbf28a616f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _start: {fileID: 8185813293527275339}
+  _start: {fileID: 7579488398721087613}
   _end: {fileID: 7250248213003858643}
 --- !u!1 &8197738954247980288
 GameObject:

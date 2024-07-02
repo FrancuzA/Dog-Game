@@ -10,22 +10,22 @@ public class end_control : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            back.transform.Translate(new Vector3(speed, 0f, 0f));
+            back.transform.Translate(new Vector3(speed * Time.deltaTime, 0f, 0f));
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            back.transform.Translate(new Vector3(-speed, 0f, 0f));
+            back.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            back.transform.Translate(new Vector3(0f,-speed, 0f));
+            back.transform.Translate(new Vector3(0f,-speed * Time.deltaTime, 0f));
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            back.transform.Translate(new Vector3(0f, speed, 0f));
+            back.transform.Translate(new Vector3(0f, speed * Time.deltaTime, 0f));
         }
     }
 

@@ -10,22 +10,22 @@ public class front_control : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-            front.transform.Translate(new Vector3(speed, 0f, 0f));
+            front.transform.Translate(new Vector3(speed*Time.deltaTime, 0f, 0f));
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            front.transform.Translate(new Vector3(-speed, 0f, 0f));
+            front.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            front.transform.Translate(new Vector3(0f, -speed, 0f));
+            front.transform.Translate(new Vector3(0f, -speed * Time.deltaTime, 0f));
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            front.transform.Translate(new Vector3(0f, speed, 0f));
+            front.transform.Translate(new Vector3(0f, speed * Time.deltaTime, 0f));
         }
     }
 
